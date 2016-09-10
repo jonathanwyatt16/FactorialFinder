@@ -1,10 +1,13 @@
 public class FactorialFinder {
 
 	public static void main(String[] aSt) {
-
+		if (aSt.length != 1) {
+			System.out.println("Please enter a non-negative integer.");
+			return;
+		}
+		
 		FactorialFinder ff = new FactorialFinder(aSt[0]);
 		ff.findFactorial();
-
 	}
 
 	private int m_nValue;
@@ -13,7 +16,7 @@ public class FactorialFinder {
 	public FactorialFinder(int nValue) {
 		if (nValue < 0)
 			throw new IllegalArgumentException("Factorial of negative number is undefined.");
-
+		
 		m_nValue = nValue;
 	}
 
